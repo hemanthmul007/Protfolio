@@ -17,7 +17,7 @@ export default function Section({
           variants={container(0)}
           initial="hidden"
           whileInView="show"
-          viewport={{ once: true, amount: 0.2 }}
+          viewport={{ once: true, amount: 0.15 }}
         >
           <motion.div variants={itemUp(0)} className="mb-6 md:mb-8">
             {eyebrow && (

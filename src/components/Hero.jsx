@@ -10,16 +10,19 @@ export default function Hero() {
   const reduce = useReducedMotion()
 
   return (
-    <section id="hero" className="relative overflow-hidden pt-24 sm:pt-28">
+    <section
+      id="hero"
+      className="relative overflow-hidden pt-24 pb-14 sm:pt-28 sm:pb-20"
+    >
       <Container>
         <motion.div
           variants={container(0.05)}
           initial="hidden"
           animate="show"
-          className="grid items-center gap-10 md:grid-cols-[1.25fr_0.75fr] md:gap-12"
+          className="grid items-center gap-8 sm:gap-10 md:grid-cols-[1.05fr_0.9fr] md:gap-12"
         >
           {/* Left */}
-          <div className="text-center md:text-left">
+          <div className="order-2 text-center md:order-1 md:text-left md:max-w-xl">
             <motion.div variants={itemLeft(0)} className="inline-flex items-center gap-2 rounded-full border border-primary/25 bg-primary/10 px-3 py-1">
               <HiOutlineSparkles className="text-primary" />
               <span className="text-[11px] font-semibold uppercase tracking-[0.28em] text-primary">
@@ -111,7 +114,10 @@ export default function Hero() {
           </div>
 
           {/* Right */}
-          <motion.div variants={itemRight(0.06)} className="mx-auto w-full max-w-sm">
+          <motion.div
+            variants={itemRight(0.06)}
+            className="order-1 mx-auto w-full max-w-xs sm:max-w-sm md:order-2"
+          >
             <div className="gradient-border relative rounded-[2rem] p-1.5 shadow-soft">
               <div className="glass relative overflow-hidden rounded-[1.6rem]">
                 <div className="absolute -left-16 -top-20 h-44 w-44 rounded-full bg-primary/35 blur-3xl" />
