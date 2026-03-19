@@ -28,6 +28,8 @@ export default function Experience() {
             <motion.div
               key={`${t.title}-${t.period}`}
               variants={itemUp(idx * 0.04)}
+              whileHover={{ y: -4 }}
+              transition={{ type: 'spring', stiffness: 260, damping: 22 }}
               className={`relative pl-10 md:pl-0 ${
                 idx % 2 === 0 ? 'md:pr-10' : 'md:pl-10'
               }`}

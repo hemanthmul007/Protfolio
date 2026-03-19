@@ -20,7 +20,9 @@ export default function Projects() {
           <motion.article
             key={p.title}
             variants={itemUp(idx * 0.03)}
-            className="group relative rounded-2xl bg-gradient-to-br from-slate-950/70 via-slate-950/55 to-slate-900/40 p-1.5 shadow-soft transition will-change-transform hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/10"
+            whileHover={{ y: -8, scale: 1.02 }}
+            transition={{ type: 'spring', stiffness: 260, damping: 22 }}
+            className="group relative rounded-2xl bg-gradient-to-br from-slate-950/70 via-slate-950/55 to-slate-900/40 p-1.5 shadow-soft transition will-change-transform"
           >
             <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-primary/10 via-transparent to-sky-400/5 opacity-0 transition group-hover:opacity-100" />
             <div className="relative flex h-full flex-col rounded-[0.9rem] border border-white/10 bg-white/5 p-5 backdrop-blur-2xl">

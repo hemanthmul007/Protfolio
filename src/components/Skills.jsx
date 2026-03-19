@@ -11,7 +11,10 @@ export default function Skills() {
       title="A modern stack, tuned for shipping."
       subtitle="Balanced across frontend craftsmanship, backend fundamentals, and DevOps execution."
     >
-      <motion.div variants={container(0)} className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <motion.div
+        variants={container(0)}
+        className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3"
+      >
         {skills.map((skill, idx) => (
           <motion.div
             key={skill.name}
@@ -35,10 +38,17 @@ export default function Skills() {
               </div>
             </div>
 
-            <div className="mt-4 h-2 w-full rounded-full bg-slate-900/70">
-              <div
-                className="h-2 rounded-full bg-gradient-to-r from-primary via-amber-300 to-orange-500 transition-all duration-700 ease-out group-hover:shadow-[0_0_26px_rgba(249,115,22,0.65)]"
-                style={{ width: `${skill.value}%` }}
+            <div className="mt-4 h-2 w-full rounded-full bg-slate-900/70 overflow-hidden">
+              <motion.div
+                className="h-2 w-full origin-left rounded-full bg-gradient-to-r from-primary via-amber-300 to-orange-500 group-hover:shadow-[0_0_26px_rgba(249,115,22,0.65)]"
+                initial={{ scaleX: 0 }}
+                whileInView={{ scaleX: skill.value / 100 }}
+                viewport={{ once: true, amount: 0.5 }}
+                transition={{
+                  duration: 0.9,
+                  delay: 0.15 + idx * 0.05,
+                  ease: [0.16, 1, 0.3, 1],
+                }}
               />
             </div>
           </motion.div>

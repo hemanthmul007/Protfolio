@@ -5,6 +5,7 @@ import Skills from './components/Skills.jsx'
 import Projects from './components/Projects.jsx'
 import Experience from './components/Experience.jsx'
 import Contact from './components/Contact.jsx'
+import CursorGlow from './components/CursorGlow.jsx'
 
 export default function App() {
   return (
@@ -18,6 +19,9 @@ export default function App() {
       <div className="pointer-events-none absolute -top-24 left-1/2 h-[26rem] w-[26rem] -translate-x-1/2 rounded-full bg-gradient-to-tr from-primary/30 via-amber-300/15 to-sky-400/10 blur-3xl" />
       <div className="pointer-events-none absolute top-[30rem] -left-28 h-[22rem] w-[22rem] rounded-full bg-gradient-to-tr from-sky-400/12 via-primary/20 to-amber-300/10 blur-3xl" />
       <div className="pointer-events-none absolute top-[70rem] -right-28 h-[22rem] w-[22rem] rounded-full bg-gradient-to-tr from-primary/18 via-amber-300/10 to-fuchsia-400/10 blur-3xl" />
+
+      {/* Cursor glow on desktop */}
+      <CursorGlow />
 
       <Navbar />
 
