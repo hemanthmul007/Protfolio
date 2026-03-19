@@ -4,9 +4,7 @@ import { HiArrowDown, HiOutlineSparkles } from 'react-icons/hi2'
 import Container from './Container.jsx'
 import { highlights, links, profile } from '../data/content'
 import { container, itemLeft, itemRight, itemUp } from '../utils/motion'
-
-const profileImg =
-  'https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=900'
+import profileImg from '../assets/Pic.jpeg'
 
 export default function Hero() {
   const reduce = useReducedMotion()
