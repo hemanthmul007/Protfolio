@@ -4,7 +4,7 @@ import { HiArrowDown, HiOutlineSparkles } from 'react-icons/hi2'
 import Container from './Container.jsx'
 import { highlights, links, profile } from '../data/content'
 import { container, itemLeft, itemRight, itemUp } from '../utils/motion'
-import profileImg from '../assets/Pic.jpeg'
+import profileImg from '../assets/Hemanth.jpeg'
 
 export default function Hero() {
   const reduce = useReducedMotion()
