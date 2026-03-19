@@ -19,16 +19,25 @@ export default function Contact() {
         <motion.form
           variants={itemUp(0)}
           className="rounded-2xl border border-white/10 bg-white/5 p-5 shadow-soft backdrop-blur-2xl"
-          onSubmit={(e) => e.preventDefault()}
+          action="https://api.web3forms.com/submit"
+          method="POST"
         >
+          <input
+            type="hidden"
+            name="access_key"
+            value="3a0f8a48-f6ab-490f-b8ec-5a3bd6a28b62"
+          />
           <div className="grid gap-4 sm:grid-cols-2">
             <div>
               <label className="text-xs font-bold uppercase tracking-[0.22em] text-slate-300">
                 Name
               </label>
               <input
+                type="text"
+                name="name"
                 className="mt-2 w-full rounded-2xl border border-white/10 bg-slate-950/40 px-4 py-3 text-sm text-slate-100 outline-none ring-primary/30 placeholder:text-slate-500 focus:border-primary/40 focus:ring-2"
                 placeholder="Your name"
+                required
               />
             </div>
             <div>
@@ -37,8 +46,10 @@ export default function Contact() {
               </label>
               <input
                 type="email"
+                name="email"
                 className="mt-2 w-full rounded-2xl border border-white/10 bg-slate-950/40 px-4 py-3 text-sm text-slate-100 outline-none ring-primary/30 placeholder:text-slate-500 focus:border-primary/40 focus:ring-2"
                 placeholder="you@example.com"
+                required
               />
             </div>
           </div>
@@ -48,8 +59,10 @@ export default function Contact() {
             </label>
             <textarea
               rows={5}
+              name="message"
               className="mt-2 w-full resize-none rounded-2xl border border-white/10 bg-slate-950/40 px-4 py-3 text-sm text-slate-100 outline-none ring-primary/30 placeholder:text-slate-500 focus:border-primary/40 focus:ring-2"
               placeholder="Tell me about the role or your project..."
+              required
             />
           </div>
 
@@ -61,7 +74,8 @@ export default function Contact() {
             <HiPaperAirplane className="text-base" />
           </button>
           <p className="mt-3 text-xs text-slate-400">
-            Demo form (wire to Formspree/EmailJS later).
+            This form is powered by Web3Forms. You&apos;ll get submissions in
+            your dashboard / email.
           </p>
         </motion.form>
 
